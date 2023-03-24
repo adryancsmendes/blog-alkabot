@@ -1,0 +1,122 @@
+/* Header para dispositivos móveis */
+.Header--mobile {
+    display: none;
+}
+
+@media (max-width: 768px) {
+    .Header--desktop {
+        display: none;
+    }
+
+    .Header--mobile {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px 25px;
+        background-color: #fff;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    }
+
+    .Header__menu-button {
+        border: none;
+        background-color: transparent;
+        font-size: 1.5rem;
+        cursor: pointer;
+    }
+
+    .Header__logo-img {
+        width: 100%;
+        height: auto;
+    }
+
+    .Header__nav {
+        display: none;
+        position: absolute;
+        top: 85px;
+        right: 0;
+        width: 100%;
+        background-color: #fff;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+        padding: 10px;
+        z-index: 1;
+    }
+
+    .Header__nav-list {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        list-style: none;
+    }
+
+    .Header__nav-item {
+        margin: 10px 0;
+    }
+
+    .Header__nav-link {
+        font-size: 1.2rem;
+        text-align: center;
+        text-decoration: none;
+        color: var(--text-color);
+        transition: color 0.3s ease-in-out;
+    }
+
+    .Header__nav-link:hover {
+        color: var(--secondary-color);
+    }
+
+    .Header__nav--open {
+        display: block;
+    }
+}
+
+
+/* Header para desktop */
+.Header--desktop {
+    display: none;
+}
+
+@media (min-width: 768px) {
+    .Header--desktop {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: #fff;
+        padding: 0.5rem;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    }
+
+    .Header__nav {
+        display: flex;
+        justify-content: flex-end;
+    }
+
+    .Header__nav-list {
+        display: flex;
+        align-items: center;
+        margin: 0;
+        padding: 0;
+        list-style: none;
+    }
+
+    .Header__nav-item {
+        margin: 0 0.5rem;
+    }
+
+    .Header__nav-link {
+        color: var(--text-color);
+        text-decoration: none;
+        font-size: 1rem;
+        font-weight: bold;
+        padding: 0.5rem;
+    }
+
+    .Header__nav-link:hover {
+        color: var(--secondary-color);
+    }
+
+    .Header__nav-link--active {
+        border-bottom: solid 3px var(--primary-color);
+        color: var(--text-color);
+    }
+
+}
