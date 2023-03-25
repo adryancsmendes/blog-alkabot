@@ -54,11 +54,11 @@ function PostDetails() {
 
   return (
     <div className="post-details">
+      <h1 className="post-details__title">{post.title}</h1>
+      <p className="post-details__author">by {post.author}</p>
       <img className="post-details__image" src={image} alt={post.title} />
       <div className="post-details__content-container">
         <div className="post-details__post">
-          <h1 className="post-details__title">{post.title}</h1>
-          <p className="post-details__author">by {post.author}</p>
           <p className="post-details__text">{post.body}</p>
         </div>
         <div className="post-details__comments">

@@ -12,11 +12,16 @@
     object-fit: cover;
   }
   
+  .post-details__content-container{
+    padding: 0 25px;
+  }
+
   .post-details__title {
     font-family: var(--title-font-family);
     font-size: 2rem;
     color: var(--primary-color);
     margin-top: 1.5rem;
+    margin-bottom: 0;
   }
 
   .post-details__title::first-letter {
@@ -27,7 +32,9 @@
     font-family: var(--text-font-family);
     font-size: var(--font-size-default);
     color: var(--secondary-color);
-    margin-top: 0.5rem;
+    padding-bottom: 2rem;
+    margin: 0.5rem  0 2rem;
+    border-bottom: solid 1px #cecece;
   }
   
   .post-details__text {
@@ -50,7 +57,9 @@
   }
   
   .post-details__comments {
-    margin: 5rem 0;;
+    margin: 2.5rem 0 5rem;
+    padding-top:2.5rem;
+    border-top: solid 1px #cecece;
   }
   
   .post-details__comments-list{
@@ -94,4 +103,10 @@
   @keyframes spin {
     0% { transform: rotate(0deg); }
     100% { transform: rotate(360deg); }
+  }
+
+  @media screen and (min-width:768px) {
+    .post-details__content-container{
+      padding: 0;
+    }
   }
