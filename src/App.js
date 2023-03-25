@@ -6,7 +6,6 @@ import Footer from './components/layout/footer/Footer';
 import PostList from './components/PostList/PostList';
 import PostDetails from './components/PostDetails/PostDetails';
 
-
 function App() {
   return (
     <Layout>

@@ -2,7 +2,8 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    padding: 25px;
+    padding: 0 25px;
+    margin: 4rem auto;
   }
   
   .post-list__item {
@@ -91,7 +92,7 @@
 
   @media screen and (min-width: 992px) {
     .post-list{
-      padding: 25px 5px;
+      padding: 0 5px;
     }
     .post-list__item {
       width: calc(33.33% - 1rem);

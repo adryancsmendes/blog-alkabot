@@ -3,6 +3,7 @@ import axios from 'axios';
 import { Link } from 'react-router-dom'
 import { ImSpinner9 } from 'react-icons/im'
 import './PostList.modules.css'
+import HeroSection from '../HeroSection/HeroSection';
 
 function PostList() {
   const [posts, setPosts] = useState([]);
@@ -66,6 +67,8 @@ function PostList() {
   }
 
   return (
+    <div className="post-list-page">
+    <HeroSection />
     <div className="post-list">
       {posts.map(post => (
         <div key={post.id} className="post-list__item">
@@ -91,6 +94,7 @@ function PostList() {
           <button onClick={handleShowMore} className="post-list__show-more">See more</button>
         </div>
       )}
+    </div>
     </div>
   );
   
