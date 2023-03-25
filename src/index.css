@@ -5,7 +5,12 @@
   /* Define as cores principais da aplicação */
   --primary-color: #0d47a1;
   --secondary-color: #00A7E1;
+  --tertiary-color: #032c6b;
   --text-color: #03142c;
+
+  /*Cores neutras*/
+  --white: #fff;
+
 
   --title-font-family:'Worksans', sans-serif;
   --text-font-family:'Roboto', sans-serif;
