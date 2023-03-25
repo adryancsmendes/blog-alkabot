@@ -12,7 +12,7 @@ function Footer() {
                 <div className="Footer__column Footer__column--1">
                     <h3 className="Footer__title">Contact Us</h3>
                     <ul className="Footer__list">
-                        <li className="Footer__item"><a href="#">hello@company.com</a></li>
+                        <li className="Footer__item"><a href="#">hello@basics.com</a></li>
                         <li className="Footer__item"><a href="#">+1 999 999 9999</a></li>
                     </ul>
                 </div>

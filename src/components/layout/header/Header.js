@@ -19,6 +19,7 @@ function Header() {
                 <div className="Header__logo">
                     <Link to="/" className="Header__logo-link">
                         <img src={logo} alt="Logo do site" className="Header__logo-img" />
+                        <span className="Header__logo-text">Basics</span>
                     </Link>
                 </div>
                 <button className="Header__menu-button" onClick={handleMenuClick}>
@@ -64,6 +65,7 @@ function Header() {
                 <div className="Header__logo">
                     <Link to="/" className="Header__logo-link">
                         <img src={logo} alt="Logo do site" className="Header__logo-img" />
+                        <span className="Header__logo-text">Basics</span>
                     </Link>
                 </div>
                 <nav className="Header__nav">
