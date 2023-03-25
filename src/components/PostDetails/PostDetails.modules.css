@@ -4,16 +4,13 @@
     flex-direction: column;
     max-width: 768px;
     margin: 2rem auto;
+    padding: 0 25px;
   }
   
   .post-details__image {
     width: 100%;
     height: auto;
     object-fit: cover;
-  }
-  
-  .post-details__content-container{
-    padding: 0 25px;
   }
 
   .post-details__title {
@@ -106,7 +103,7 @@
   }
 
   @media screen and (min-width:768px) {
-    .post-details__content-container{
+    .post-details{
       padding: 0;
     }
   }
