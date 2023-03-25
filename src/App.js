@@ -12,10 +12,12 @@ function App() {
     <Layout>
       <Router>
         <Header />
+        <main className="Main">
         <Routes>
           <Route path="/" element={<PostList />} />
           <Route path="/post/:id" element={<PostDetails />} />
         </Routes>
+        </main>
         <Footer />
       </Router>
     </Layout>

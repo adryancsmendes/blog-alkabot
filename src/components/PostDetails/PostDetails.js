@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import { useLocation, useParams } from 'react-router-dom';
+import { ImSpinner9 } from 'react-icons/im'
 import './PostDetails.modules.css'
 
 function PostDetails() {
@@ -12,6 +13,8 @@ function PostDetails() {
 
   useEffect(() => {
     async function fetchPost() {
+      // define o estado de carregamento para true
+      setLoading(true);
       try {
         const response = await axios.get(`https://jsonplaceholder.typicode.com/posts/${id}`);
         const userResponse = await axios.get(`https://jsonplaceholder.typicode.com/users/${response.data.userId}`);
@@ -20,6 +23,7 @@ function PostDetails() {
           author: userResponse.data.name
         });
         setImage(location.state.imageUrl);
+        setLoading(false);
       } catch (error) {
         console.error(`Error fetching post: ${error}`);
         // exibe um alerta com a mensagem de erro
@@ -40,8 +44,12 @@ function PostDetails() {
     fetchComments();
   }, [id, location]);
 
-  if (!post) {
-    return <div>Loading...</div>;
+  // define o estado de carregamento inicial como true
+  const [loading, setLoading] = useState(true);
+
+  // se o estado de carregamento for verdadeiro, exibe uma mensagem de carregamento
+  if (loading) {
+    return <div className="Loading"><ImSpinner9 /></div>;
   }
 
   return (

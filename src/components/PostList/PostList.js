@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import { Link } from 'react-router-dom'
+import { ImSpinner9 } from 'react-icons/im'
 import './PostList.modules.css'
 
 function PostList() {
@@ -9,6 +10,8 @@ function PostList() {
 
   useEffect(() => {
     async function fetchPosts() {
+      // define o estado de carregamento para true
+      setLoading(true);
       try {
         const response = await axios.get('https://jsonplaceholder.typicode.com/posts');
         const postsWithImages = await Promise.all(response.data.slice(0, limit).map(async post => {
@@ -39,6 +42,7 @@ function PostList() {
           }
         }));
         setPosts(postsWithImages);
+        setLoading(false);
       } catch (error) {
         console.error(`Error fetching posts: ${error}`);
         // exibe um alerta com a mensagem de erro
@@ -48,6 +52,14 @@ function PostList() {
   
     fetchPosts();
   }, [limit]);
+
+  // define o estado de carregamento inicial como true
+  const [loading, setLoading] = useState(true);
+
+  // se o estado de carregamento for verdadeiro, exibe uma mensagem de carregamento
+  if (loading) {
+    return <div className="Loading"><ImSpinner9 /></div>;
+  }
 
   const handleShowMore = () => {
     setLimit(prevLimit => prevLimit + 3);
