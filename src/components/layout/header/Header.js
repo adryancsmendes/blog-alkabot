@@ -32,12 +32,12 @@ function Header() {
                 <nav className={`Header__nav ${isMenuOpen ? "Header__nav--open" : ""}`}>
                     <ul className="Header__nav-list">
                         <li className="Header__nav-item">
-                            <Link to="#" className="Header__nav-link">
+                            <Link to="/" className="Header__nav-link">
                                 Home
                             </Link>
                         </li>
                         <li className="Header__nav-item">
-                            <Link to="/blog" className="Header__nav-link Header__nav-link--active">
+                            <Link to="/" className="Header__nav-link Header__nav-link--active">
                                 Blog
                             </Link>
                         </li>
@@ -71,12 +71,12 @@ function Header() {
                 <nav className="Header__nav">
                     <ul className="Header__nav-list">
                         <li className="Header__nav-item">
-                            <Link to="#" className="Header__nav-link">
+                            <Link to="/" className="Header__nav-link">
                                 Home
                             </Link>
                         </li>
                         <li className="Header__nav-item">
-                            <Link to="/blog" className="Header__nav-link Header__nav-link--active">
+                            <Link to="/" className="Header__nav-link Header__nav-link--active">
                                 Blog
                             </Link>
                         </li>

@@ -57,19 +57,19 @@ function PostList() {
     <div className="post-list">
       {posts.map(post => (
         <div key={post.id} className="post-list__item">
-          <Link to={`/post/${post.id}`}>
+          <Link to={`/post/${post.id}`} state={{ imageUrl: post.imageUrl }}>
             <div className="post-list__image" style={{ backgroundImage: `url(${post.imageUrl})` }}></div>
           </Link>
           <div className="post-list__content">
             <div className="post-list__text">
-              <Link className="post-list__title" to={`/post/${post.id}`}>
+              <Link className="post-list__title" to={`/post/${post.id}`} state={{ imageUrl: post.imageUrl }}>
                 <h2>{post.title}</h2>
               </Link>
               <p className="post-list__info">by {post.author}</p>
               <p className="post-list__excerpt">{post.body}</p>
             </div>
             <div className="post-list__button-container">
-              <Link to={`/post/${post.id}`} className="post-list__button">Read full article</Link>
+              <Link to={`/post/${post.id}`} state={{ imageUrl: post.imageUrl }} className="post-list__button">Read full article</Link>
             </div>
           </div>
         </div>
