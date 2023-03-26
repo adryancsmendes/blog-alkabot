@@ -90,7 +90,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    min-height: 100vh;
+    min-height: 50vh;
     animation: spin 1s linear infinite;
     font-size: 3rem;
     color: var(--primary-color);
