@@ -84,6 +84,25 @@
     font-weight: bold;
   }
   
+  .post-list__show-more-container{
+    margin: 0 auto;
+  }
+
+  .post-list__show-more{
+    background: var(--primary-color);
+    color: var(--white);
+    border: solid 1px var(--primary-color);
+    border-radius: 0.5rem;
+    padding: 0.5rem 0.75rem;
+  }
+
+  .post-list__show-more:hover{
+    transition: .4s;
+    cursor: pointer;
+    background: var(--white);
+    color: var(--primary-color);
+  }
+
   @media screen and (min-width: 768px) {
     .post-list__item {
       width: calc(50% - 1rem);
