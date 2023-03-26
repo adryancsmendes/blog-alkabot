@@ -42,7 +42,7 @@ function Header() {
                             </Link>
                         </li>
                         <li className="Header__nav-item">
-                            <Link to="#" className="Header__nav-link">
+                            <Link to="/" className="Header__nav-link">
                                 Resources
                             </Link>
                         </li>
@@ -81,7 +81,7 @@ function Header() {
                             </Link>
                         </li>
                         <li className="Header__nav-item">
-                            <Link to="#" className="Header__nav-link">
+                            <Link to="/" className="Header__nav-link">
                                 Resources
                             </Link>
                         </li>
