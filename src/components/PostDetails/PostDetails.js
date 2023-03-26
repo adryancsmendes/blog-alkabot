@@ -5,13 +5,18 @@ import { ImSpinner9 } from 'react-icons/im'
 import './PostDetails.modules.css'
 
 function PostDetails() {
-  const { id } = useParams();
+  const { id } = useParams(); // Obtém o parâmetro de rota "id" usando o hook "useParams" do React Router
+
+  // Define os estados iniciais para o post, os comentários e a imagem do post
   const [post, setPost] = useState(null);
   const [comments, setComments] = useState([]);
-  const location = useLocation();
   const [image, setImage] = useState('');
 
+  // Obtém o objeto de localização da rota atual usando o hook "useLocation" do React Router
+  const location = useLocation();
+
   useEffect(() => {
+    // Define as funções assíncronas para buscar o post e os comentários usando a API JSONPlaceholder
     async function fetchPost() {
       // define o estado de carregamento para true
       setLoading(true);
@@ -22,6 +27,7 @@ function PostDetails() {
           ...response.data,
           author: userResponse.data.name
         });
+        // Define a imagem do post com base no estado de localização atual da rota
         setImage(location.state.imageUrl);
         setLoading(false);
       } catch (error) {
@@ -31,6 +37,7 @@ function PostDetails() {
       }
     }
 
+    // Define uma função assíncrona para buscar os comentários do post atual através da API 'jsonplaceholder'
     async function fetchComments() {
       try {
         const response = await axios.get(`https://jsonplaceholder.typicode.com/posts/${id}/comments`);
@@ -40,8 +47,12 @@ function PostDetails() {
       }
     }
 
+    // Chama as funções 'fetchPost' e 'fetchComments' para carregar os dados do post e seus comentários
     fetchPost();
     fetchComments();
+    
+    // Rola a página para o topo para que o usuário possa ver o conteúdo principal do post
+    window.scrollTo(0, 0);
   }, [id, location]);
 
   // define o estado de carregamento inicial como true
