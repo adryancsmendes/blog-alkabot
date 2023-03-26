@@ -34,7 +34,7 @@ function PostList() {
 
             return {
               ...post,
-              imageUrl: image.data.photos[0].src.medium,
+              imageUrl: image.data.photos && image.data.photos[0] && image.data.photos[0].src && image.data.photos[0].src.medium, // Verifica se existe uma URL de imagem disponível e atribui à propriedade imageUrl
               author: user.data.name
             };
           } catch (error) {
