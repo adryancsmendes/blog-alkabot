@@ -16,8 +16,23 @@ comentários associados.
 
 Para rodar a aplicação localmente, siga os passos abaixo:
 
-1. Clone o repositório para sua máquina: `git clone https://github.com/seu-usuario/desafio-alkabot.git`
-2. Instale as dependências do projeto: `npm install`
-3. Rode a aplicação: `npm start`
+1. Clone o repositório para sua máquina: 
+```bash
+git clone https://github.com/seu-usuario/desafio-alkabot.git
+```
+
+2. Instale as dependências do projeto:
+```bash
+yarn
+# ou
+npm install
+```
+
+3. Rode a aplicação: 
+```bash
+yarn
+# ou
+npm start
+```
 
 A aplicação estará disponível em http://localhost:3000.
